@@ -19,4 +19,5 @@ public class PointerControl : MonoBehaviour
         temp.z = 5f; // Set this to be the distance you want the object to be placed in front of the camera.
         this.transform.position = Camera.main.ScreenToWorldPoint(temp);
     }
+    
 }
