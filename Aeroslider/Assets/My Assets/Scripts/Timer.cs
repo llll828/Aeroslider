@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public float timeLeft;
     public int time;
-    public Text timerText;
+    public Text timeText;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,7 +19,7 @@ public class Timer : MonoBehaviour
 
     void UpdateTimeUI()
     {
-        timerText.text = "Time Left: " + time.ToString();
+        timeText.text = "Time Left: " + time.ToString();
     }
 
     // Update is called once per frame

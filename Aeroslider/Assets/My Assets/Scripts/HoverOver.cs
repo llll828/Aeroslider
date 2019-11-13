@@ -33,7 +33,7 @@ public class HoverOver : MonoBehaviour    {
     {
         if (isStart)
         {
-            SceneManager.LoadScene("U_Scene_0");
+            SceneManager.LoadScene("Scene_1");
         }
         if (isExit)
         {
