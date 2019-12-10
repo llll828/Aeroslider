@@ -9,26 +9,29 @@ public class Timer : MonoBehaviour
     public float timeLeft;
     public int time;
     public Text timeText;
+    //public int time;
+    //public Text timerText;
 
     // Start is called before the first frame update
     private void Start()
     {
-        UpdateTimeUI();
+      //  UpdateTimeUI();
     }
 
 
     void UpdateTimeUI()
     {
         timeText.text = "Time Left: " + time.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+       // timeLeft -= Time.deltaTime;
+       // if (timeLeft < 0)
         {
-            SceneManager.LoadScene("TempEndScreen");
+          //  SceneManager.LoadScene("TempEndScreen");
         }
     }
 }
