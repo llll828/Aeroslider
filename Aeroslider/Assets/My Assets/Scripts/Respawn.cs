@@ -19,9 +19,9 @@ public class Respawn : MonoBehaviour {
         {
             transform.position = respawnPoint;
         }
-        if (other.gameObject.tag == "Macguffin")
-        {
-            transform.position = respawnPoint;
-        }
+       // if (other.gameObject.tag == "Macguffin")
+       // {
+          //  transform.position = respawnPoint;
+       // }
     }
 }

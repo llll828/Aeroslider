@@ -6,32 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft;
-    public int time;
-    public Text timeText;
-    //public int time;
-    //public Text timerText;
-
-    // Start is called before the first frame update
-    private void Start()
+    public float timeLeft = 280; //Seconds Overall
+    public Text countdown; //UI Text Object
+    void Start()
     {
-      //  UpdateTimeUI();
+        StartCoroutine("LoseTime");
+        Time.timeScale = 1; //Just making sure that the timeScale is right
     }
-
-
-    void UpdateTimeUI()
-    {
-        timeText.text = "Time Left: " + time.ToString();
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-       // timeLeft -= Time.deltaTime;
-       // if (timeLeft < 0)
+        countdown.text = ("" + timeLeft); //Showing the Score on the Canvas
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
         {
-          //  SceneManager.LoadScene("TempEndScreen");
+            SceneManager.LoadScene("Scene_2");
+        }
+    }
+    //Simple Coroutine
+    IEnumerator LoseTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            timeLeft--;
         }
     }
 }
